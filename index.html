@@ -1,0 +1,32 @@
+<p>All the paste files are deleted after 5 hours.<br>
+List of dumb people who abused the service: 88.97.38.27, 109.78.242.195, 2.26.102.42<br>Paste:</p>
+<p><textarea style="margin: 0px; height: 80%; width: 100%;" form="usrform" id="xcode" name="xcode">&gt;_ code _&lt;
+_> here <_</textarea></p>
+<form id="usrform" action="/paste.php" method="post" enctype="multipart/form-data"><input type="submit" value='Upload to server'/></form>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+
+	    var to_compile = {
+		    "LanguageChoice": "5",
+		    "Program": $("#xcode").val(),
+		    "Input": "",
+		    "CompilerArgs" : ""
+	    };
+
+	    $.ajax ({
+		        url: "http://rextester.com/rundotnet/api",
+		        type: "POST",
+		        data: to_compile
+		    }).done(function(data) {
+		        document.getElementById('xcode').value="Result: "+(JSON.stringify(data['Result']));
+		        document.getElementById('xcode').value+="\nErrors: "+(JSON.stringify(data['Errors']));
+		    }).fail(function(data, err) {
+		        alert("fail " + JSON.stringify(data) + " " + JSON.stringify(err));
+	        });
+    });
+});
+</script>
+<button id="run">Run py3 script</button>

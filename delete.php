@@ -3,7 +3,7 @@
 $files = glob("./paste/"."*");
 foreach ($files as $file) {
 if (is_file($file)) {
-  if ($file != './paste/index.html') { // 2 hours
+  if ($file != './paste/index.html') {
     unlink ($file);
   }
 }

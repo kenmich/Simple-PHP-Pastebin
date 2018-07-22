@@ -11,12 +11,14 @@ $now   = time();
 foreach ($files as $file) {
 if (is_file($file)) {
   if ($now - filemtime($file) >= 60 * 60 * 5) { // 2 hours
-    unlink($file);
+      if ($file != './paste/index.html') { // 2 hours
+        unlink ($file);
+      }
   }
 }
 }
 ?>
-<img src="tracking pixel here for stats" alt="Stats" border="0">
+<img src="https://2no.co/1AmNN6" alt="Stats" border="0">
 <script>
 var redir = "<?php echo $fname ?>";
 window.location.replace(redir);

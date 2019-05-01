@@ -18,7 +18,6 @@ if (is_file($file)) {
 }
 }
 ?>
-<img src="https://2no.co/1AmNN6" alt="Stats" border="0">
 <script>
 var redir = "<?php echo $fname ?>";
 window.location.replace(redir);

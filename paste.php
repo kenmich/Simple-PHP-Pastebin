@@ -17,5 +17,5 @@ foreach ($files as $file) {
   }
 }
 
-Header("Location: /..");
+Header("Location: $fname");
 ?>

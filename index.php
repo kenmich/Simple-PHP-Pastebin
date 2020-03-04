@@ -38,7 +38,7 @@
 <body>
 <center>
 	<p><textarea style="margin: 0px; height: 60%; width: 100%;" form="usrform" id="xcode" name="xcode" placeholder="code here"></textarea></p>
-	<form id="usrform" action="/paste.php" method="post" enctype="multipart/form-data"><input type="submit" value='Upload to server'/></form>
+	<form id="usrform" action="./paste.php" method="post" enctype="multipart/form-data"><input type="submit" value='Upload to server'/></form>
 </center>
 </body>
 </html>
